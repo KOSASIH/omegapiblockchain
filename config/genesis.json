@@ -1,0 +1,28 @@
+{
+  "config": {
+    "chainId": "omega-pi-1",
+    "homesteadBlock": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0
+  },
+  "difficulty": "0x20000000000000",
+  "gasLimit": "0x1fffffffffffff",
+  "alloc": {
+    "0x0000000000000000000000000000000000000001": {
+      "balance": "0x1000000000000000000000"
+    },
+    "0x0000000000000000000000000000000000000002": {
+      "balance": "0x1000000000000000000000"
+    }
+  },
+  "coinbase": "0x0000000000000000000000000000000000000001",
+  "timestamp": "0x5f5f5f5f5f5f5f5f",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "extraData": "0x",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "nonce": "0x0"
+}
