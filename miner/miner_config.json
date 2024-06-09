@@ -1,0 +1,8 @@
+{
+    "hash_rate": 100000000,
+    "difficulty_target": 1000000000000000000000000000000000000000000000000000000000000000,
+    "block_reward": 1000000000000000000,
+    "transaction_fee": 1000000000000000,
+    "mining_pool_size": 100,
+    "machine_learning_model": "random_forest"
+}
