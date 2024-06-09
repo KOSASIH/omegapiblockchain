@@ -1,0 +1,45 @@
+{
+  "network": {
+    "name": "Omega Pi Blockchain",
+    "version": "1.0.0",
+    "chainId": "omega-pi-1",
+    "networkId": "0x1234567890abcdef"
+  },
+  "node": {
+    "listenAddr": "0.0.0.0:30303",
+    "maxPeers": 100,
+    "maxPendingPeers": 20,
+    "peerDiscovery": {
+      "enabled": true,
+      "bootnodes": ["enode://pubkey1@ip1:port1", "enode://pubkey2@ip2:port2"]
+    }
+  },
+  "consensus": {
+    "algorithm": "PoS",
+    "epochLength": 100,
+    "targetBlockTime": 10,
+    "maxBlockGasLimit": 10000000,
+    "minBlockGasLimit": 100000
+  },
+  "txpool": {
+    "maxTxSize": 1024,
+    "maxTxCount": 1000,
+    "txExpiration": 3600
+  },
+  "database": {
+    "type": "leveldb",
+    "path": "data/omega-pi-db",
+    "cacheSize": 1024
+  },
+  "logging": {
+    "level": "INFO",
+    "output": "stdout",
+    "format": "json"
+  },
+  "security": {
+    "privateKey": "0x0123456789abcdef",
+    "publicKey": "0x0123456789abcdef",
+    "tlsCert": "path/to/tls-cert.pem",
+    "tlsKey": "path/to/tls-key.pem"
+  }
+}
