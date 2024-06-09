@@ -1,0 +1,13 @@
+{
+  "name": "omega-pi-blockchain",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "ipfs-http-client": "^48.0.0",
+    "tensorflow": "^2.3.0"
+  },
+  "scripts": {
+    "start": "node node.js"
+  }
+}
