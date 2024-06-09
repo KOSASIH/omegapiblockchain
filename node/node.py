@@ -6,18 +6,18 @@ import random
 import time
 from typing import Dict, List
 import numpy as np
-from qiskit import QuantumCircuit, execute
+from nengo import Network, Ensemble, Node
 
 class Node:
     def __init__(self, node_id: str, blockchain: 'Blockchain'):
         self.node_id = node_id
         self.blockchain = blockchain
         self.peers: List['Node'] = []
-        self.quantum_circuit = QuantumCircuit(5, 5)
+        self.neural_network = Network()
 
     async def start_node(self):
         while True:
-            # Verify and validate incoming blocks
+            # Verify and validate incoming blocks using neuromorphic computing
             await self.verify_blocks()
 
             # Broadcast new blocks to peers
@@ -27,19 +27,11 @@ class Node:
             await asyncio.sleep(random.uniform(1, 5))
 
     async def verify_blocks(self):
-        # Verify and validate incoming blocks using quantum computing
+        # Verify and validate incoming blocks using neuromorphic computing
         for block in self.blockchain.chain:
-            self.quantum_circuit.reset()
-            self.quantum_circuit.h(0)
-            self.quantum_circuit.cx(0, 1)
-            self.quantum_circuit.cx(1, 2)
-            self.quantum_circuit.cx(2, 3)
-            self.quantum_circuit.cx(3, 4)
-            self.quantum_circuit.measure_all()
-            job = execute(self.quantum_circuit, backend='qasm_simulator', shots=1)
-            result = job.result()
-            counts = result.get_counts()
-            hash = max(counts, key=counts.get)
+            self.neural_network.make_input(block)
+            output = self.neural_network.run(1000)
+            hash = hashlib.sha256(output.encode()).hexdigest()
             if self.validate_hash(hash):
                 # Block is valid, update the blockchain
                 self.blockchain.add_block(block)
